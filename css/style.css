@@ -1,0 +1,493 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body {
+  min-width: 1320px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #666666;
+ }
+/*
+실습-google 웹폰트 noto sans kr을 적용하시오
+*/
+ul,ol { list-style: none; }
+/* a { color: #3e3e3e; } */
+h1,h2,h3,h4,h5,h6 { line-height: 1; }
+
+/* header-wrap */
+  #header-wrap {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 300;
+    box-shadow: 0 2px 2px -1px rgb(0 0 0 / 10%);
+  }
+
+  /*상단 고정형 메뉴 사이트이름~메뉴*/
+#header {
+    /* position: fixed; */
+    width: 1320px;
+    margin: 0 auto;
+    padding: 45px 20px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 300;
+  }
+
+#logo {
+  float: left;
+ }
+
+#header .inner { float: right; }
+
+#header .inner #gnb, #header .inner #login-menu { float: left; }
+
+#header .inner > ul {
+  overflow: hidden;
+}
+
+#header .inner > ul > li { float: left; }
+
+#header .inner > ul > li > a {
+  line-height: 20px;
+  color: #3e3e3e;
+}
+
+header .inner > ul#login-menu > li:nth-child(1) > a {
+  color: #fff;
+}
+
+/*지금문의하기,로그인부분 중간으로 오게만들려면 지정해서 라인하이트30으로 바꿔주기*/
+#header .inner > ul#login-menu > li > a { line-height: 30px; }
+
+#gnb { margin-right: 93px; }
+
+#gnb li {
+ margin-left: 50px;
+}
+
+#gnb li:nth-child(1) {
+  margin-left: 0;
+}
+#login li { margin-left: 30px; }
+
+#login-menu li:nth-child(1) {
+  margin-left: 0;
+}
+
+/*login-menu 상단우측 버튼2개 만들기 */
+.commonbtn {
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 8px;
+  background: #1c6eff;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.commonbtn02 {
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 8px;
+  background: #ebeff7;
+  font-size: 15px;
+  text-align: center;
+  color: #7b87a0;
+  margin-right: 20px;
+}
+
+/*메인 배너 영역 소비자의 데이터로~부분 이미지*/
+#mainbanner {
+  background-image: url('../img/img_main.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 90%;
+  background-color: #c7fcff;
+}
+
+#mainbanner .inner {
+  position: relative;
+  width: 1320px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/*메인 배너 텍스트-소비자의 데이터로~*/
+#mainbanner .maintext {
+  padding-top: 268px;
+}
+
+#mainbanner .maintext p {
+  font-size: 55px;
+  color: #333333;
+}
+
+#mainbanner .maintext p.maintitle {
+  line-height: 70px;
+}
+
+#mainbanner .maintext p.subtitle {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #666666;
+}
+
+#mainbanner .maintext p.subtitle + .common-btn {
+  margin-top: 40px;
+}
+
+/*지금 문의하기,소개서받기 메인베너 버튼*/
+.common-btn {
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 8px;
+  background: #0050ff;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin-right: 20px;
+}
+
+.common-btn02 {
+  display: inline-block;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 20px;
+  text-align: center;
+  color: #0050ff;
+}
+
+#middle .inner {
+  /* 부모요소에 텍스트센터-ul자식요소에 인라인블럭을 줘야 중앙으로 정렬됨 */
+  text-align: center;
+  background-color: #f3feff;
+}
+
+/*미들 영역*/
+#middle .inner ul {
+  display: inline-block;
+  height: 130px;
+  background-color: #f3feff;
+  overflow: hidden;
+}
+
+#middle .inner ul li {
+  margin: 50px 5px;
+  float: left;
+  height: 100px;
+}
+
+/*1번째 컨텐츠영역*/
+#container section .inner {
+  width: 1320px;
+  min-height: 650px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+#container section:nth-child(2) {
+    background: #dff9fb;
+}
+
+#container section:nth-of-type(1) .inner {
+  padding-top: 165px;
+  min-height: 485px;
+}
+
+#container section:nth-of-type(2) .inner {
+  padding-top: 145px;
+  min-height: 505px;
+}
+
+/*각 섹션의 공통요소 스타일주기*/
+#container section .inner h2 {
+  font-size: 45px;
+  line-height: 1;
+  color: #3e3e3e;
+}
+
+#container section .inner .subtitle {
+  font-size: 20px;
+  margin-top: 22px;
+  line-height: 30px;
+  color: #3e3e3e;
+}
+
+/*트렌드리포트*/
+#container section .inner .box-wrap {
+  overflow: hidden;
+}
+
+/* 트렌스~푸드 박스 */
+#container section .inner .box-wrap li {
+  float: left;
+  width: calc(25% - 40px);
+  padding: 0 20px;
+  text-align: center;
+}
+
+#container section .inner .box-wrap li .items {
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  padding: 47px 0 45px;
+  background-color: #f6f7fb;
+}
+
+/*트렌드리포트 제목*/
+#container section .inner .box-wrap li .items h3 {
+  font-size: 20px;
+  color: #252525;
+}
+
+#container section .inner .box-wrap li .items p {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  line-height: 24px;
+}
+
+#container section .inner .thumb-img-wrap {
+  text-align: center;
+}
+
+#container section .inner .thumb-img-wrap ul {
+  overflow: hidden;
+  display: inline-block;
+}
+
+#container section .inner .thumb-img-wrap ul:nth-child(1) {
+  margin-top: 70px;
+}
+
+#container section .inner .thumb-img-wrap ul:nth-child(2) {
+  margin-top: 80px;
+}
+
+#container section .inner .thumb-img-wrap ul li {
+  float: left;
+  width: calc( 100% / 6 );
+  height: 37px;
+}
+
+#container section .inner .thumb-img-wrap ul li img {
+  width: 100%;
+}
+
+/*섹션 3번째-마케팅리서치*/
+#container section .inner .box {
+  float: left;
+  width: 50%;
+  min-height: 650px;
+  text-align: center;
+}
+
+
+#container section .inner .box.img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#container section:nth-child(3) .inner .box.img {
+  background-image: url('../img/section_3/img_main_marketing.png');
+  background-size: auto 80%;
+}
+
+#container section .inner .box .text-box {
+  display: inline-block;
+  text-align: left;
+  margin-top: 160px;
+  padding-left: 140px;
+}
+
+#container section .inner .box .text-box a {
+  text-align: center;
+  margin-top: 35px;
+ }
+
+/*섹션4번째 기업고객자문단*/
+#container section:nth-child(4) .box.img {
+  background-image: url('../img/section_4/img_main_panel.png');
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: right;
+}
+
+#container section:nth-child(4) .inner .box .text-box {
+  padding-left: 50px;
+}
+
+/*섹션5번째 ux리서치*/
+#container section:nth-child(5) .box.img {
+  background-image: url('../img/section_5/img_main_ux.png');
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+}
+
+/*섹션 6번째-시대를앞서가는~*/
+#container section:nth-child(6) {
+  background: #dff9fb;
+  height: 850px;
+}
+
+#container section .inner .wrap h2 {
+  padding: 120px;
+}
+
+/* 섹션6번째 소비자전략본부~상자4개만들기 */
+#container section .inner .wrap {
+  overflow: hidden;
+}
+
+#container section .inner .wrap li {
+  float: left;
+  width: calc( 25% - 30px );
+  /* 패딩,마진-2개적을때 위아래,좌우 // 3개적을때 위,좌우,아래 */
+  padding: 0 15px 20px;
+  text-align: center;}
+
+#container section .inner .wrap li .itmes {
+  padding: 40px 0 40px;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 20px rgb(72 76 77 / 30%);
+}
+/* 소비자시장전략본부글씨 */
+#container section .inner .wrap li .itmes h3 {
+  font-size: 20px;
+  color: #343f55;
+  padding: 10px;
+}
+/* 이지우과장님 */
+#container section .inner .wrap li .itmes h4 {
+  font-size: 15px;
+  color: #949eb2;
+  padding-bottom: 30px;
+}
+
+#container section .inner .wrap li .itmes p {
+  line-height: 30px;
+}
+
+/*섹션7번째 바로문의하세요~*/
+#container section .inner .wrap_box {
+  overflow: hidden;
+}
+
+#container section .inner .wrap_box {
+  padding-top: 120px;
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+#container section .inner .wrap_box li .itmes {
+  /* height: 400px; */
+  background: linear-gradient(180deg,#1c6eff,#649cff);
+  border-radius: 20px;
+  padding: 80px 160px;
+  text-align: center;
+}
+
+#container section .inner .wrap_box li .itmes h3 {
+  color: white;
+  font-size: 45px;
+
+}
+
+#container section .inner .wrap_box li .itmes h4 {
+  color: white;
+  font-size: 18px;
+  padding-top: 60px;
+  line-height: 30px;
+}
+
+/* 문의버튼만들기 */
+
+#container section .inner .itmes a {
+  margin-top: 30px;
+}
+
+.common_btn {
+  display: inline-block;
+  width: 160px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 17px;
+  background: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #1c6eff;
+}
+
+/*하단영역 FOOTER*/
+#footer {
+  background-color: #343f55;
+}
+
+#footer .inner {
+  position: relative;
+  width: 1320px;
+  height: 200px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  color: white;
+}
+
+#footer .inner .f-box {
+  float: left;
+}
+
+#footer .inner .f-box:nth-child(2) {
+  /* margin-left를 줘도 똑같음 */
+  padding-left: 75px;
+}
+
+#footer .inner .f-box ul { overflow: hidden; }
+
+#footer .inner .f-box ul li {
+  float: left;
+  height: 20px;
+  margin-right: 40px;
+}
+
+#footer .inner .f-box ul li:last-child {
+  margin-right: 0;
+}
+
+#footer .inner .f-box ul li a{
+  margin-left: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+
+#footer .inner .f-box .tel {
+  /* 16px 폰트사이즈와 동일하게 라인하이트를 주겠다. =1 */
+  margin-left: 20px;
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
+
+#footer .inner .f-box .copyright {
+  margin-left: 20px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+}
