@@ -1,15 +1,12 @@
 @charset "UTF-8";
+/* 오픈설브  */
 html,body { height: 100%; }
 body {
   min-width: 1320px;
   font-family: 'Noto Sans KR', sans-serif;
-  color: #555555;
+  color: #666666;
  }
-/*
-실습-google 웹폰트 noto sans kr을 적용하시오
-*/
 ul,ol { list-style: none; }
-/* a { color: #3e3e3e; } */
 h1,h2,h3,h4,h5,h6 { line-height: 1; }
 
 /* header-wrap */
@@ -25,9 +22,10 @@ h1,h2,h3,h4,h5,h6 { line-height: 1; }
   /*상단 고정형 메뉴 사이트이름~메뉴*/
 #header {
     /* position: fixed; */
+    justify-content: space-between;
     width: 1320px;
     margin: 0 auto;
-    padding: 45px 20px 0;
+    padding: 30px 20px 0;
     overflow: hidden;
     box-sizing: border-box;
     z-index: 300;
@@ -37,7 +35,9 @@ h1,h2,h3,h4,h5,h6 { line-height: 1; }
   float: left;
  }
 
-#header .inner { float: right; }
+#header .inner { float: right;
+  vertical-align: middle;
+ }
 
 #header .inner #gnb, #header .inner #login-menu { float: left; }
 
@@ -52,33 +52,44 @@ h1,h2,h3,h4,h5,h6 { line-height: 1; }
   color: #3e3e3e;
 }
 
-header .inner > ul#login-menu > li:nth-child(1) > a {
+header .inner > ul#login-menu > li > a {
   color: #fff;
 }
 
 /*지금문의하기,로그인부분 중간으로 오게만들려면 지정해서 라인하이트30으로 바꿔주기*/
-#header .inner > ul#login-menu > li > a { line-height: 30px; }
+#header .inner > ul#login-menu > li > a { line-height: 34px; }
 
-#gnb { margin-right: 93px; }
+#gnb { margin-right: 93px;
+line-height: 30px; }
 
 #gnb li {
  margin-left: 50px;
 }
 
+#gnb li a:hover {
+  border-bottom: 2px solid blue;
+  opacity: 0.8;
+}
+
 #gnb li:nth-child(1) {
   margin-left: 0;
 }
-#login li { margin-left: 30px; }
+/* #login li { margin-left: 30px; } */
 
 #login-menu li:nth-child(1) {
   margin-left: 0;
 }
 
+#login-menu {
+  display: inline-block;
+}
+
 /*login-menu 상단우측 버튼2개 만들기 */
 .commonbtn {
   display: inline-block;
-  width: 110px;
-  height: 30px;
+  width: 115px;
+  height: 35px;
+  /* flex-basis: 25%; */
   line-height: 30px;
   border-radius: 8px;
   background: #1c6eff;
@@ -87,6 +98,29 @@ header .inner > ul#login-menu > li:nth-child(1) > a {
   color: white;
   margin-right: 20px;
   margin-bottom: 10px;
+}
+
+#login-menu a:hover{
+  opacity: 0.8;
+}
+
+/* .commonbtn:nth-child(2) {
+  background: #000;
+  color: #7b87a0;
+} */
+
+#mainbanner .btnwrap {
+  margin-top: 30px;
+}
+
+#mainbanner .btnwrap a:nth-child(1):hover{
+  color: #1c6eff;
+  background: #fff;
+}
+
+#mainbanner .btnwrap a:nth-child(2):hover{
+  color: #fff;
+  background: #1c6eff;
 }
 
 .commonbtn02 {
@@ -186,6 +220,10 @@ header .inner > ul#login-menu > li:nth-child(1) > a {
   margin: 50px 5px;
   float: left;
   height: 100px;
+}
+
+#middle .inner {
+  animation: move 50s linear infinite;
 }
 
 /*1번째 컨텐츠영역*/
@@ -433,8 +471,89 @@ header .inner > ul#login-menu > li:nth-child(1) > a {
   color: #1c6eff;
 }
 
-/*하단영역 FOOTER*/
-#footer {
+/* 푸터리뉴얼 */
+.footer {
+  background-color: #fff;
+  padding-top: 50px;
+  height: 250px;
+}
+
+.footer .container {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+.footer .f-box1 {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer .f-box1 ul li {
+  /* float: left; */
+  display: inline-block;
+  line-height: 55px;
+}
+
+.footer .f-box1 ul li a {
+  color: #000;
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer .f-box2 {
+  /* margin: 0 30px;; */
+  /* width: 920px; */
+  padding-top: 20px;
+}
+
+.footer .f-box2 .left{
+  float: left;
+}
+
+.footer .f-box2 .left ul li {
+  display: inline-block;
+  /* float: left; */
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.footer .f-box2 .tit {
+  font-weight: 600;
+}
+
+.footer .right ul {
+  text-align: right;
+}
+
+.footer .right ul li {
+  display: inline-block;
+}
+
+.footer .right ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.footer .right .ico_ico01{
+  background: url('../img/ico01.png');
+  background-size: cover;
+}
+
+.footer .right .ico_ico02 {
+  background: url('../img/ico02.png');
+  background-size: cover;
+}
+
+.footer .right .ico_ico03 {
+  background: url('../img/ico03.png');
+  background-size: cover;
+}
+
+
+/*(구)하단영역 FOOTER*/
+/* #footer {
   background-color: #343f55;
 }
 
@@ -490,4 +609,4 @@ header .inner > ul#login-menu > li:nth-child(1) > a {
   font-size: 12px;
   line-height: 16px;
   color: #fff;
-}
+} */
